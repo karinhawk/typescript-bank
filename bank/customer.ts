@@ -23,4 +23,10 @@ export class Customer {
     public set displayName(displayName: string) {
         this._displayName = displayName;
     }
+
+    check_account(customer: Customer){
+        console.log("Accessed account number " + customer.id)
+        console.log("Name: " + customer.name)
+        console.log("Display Name: " + customer.displayName)
+    }
 }

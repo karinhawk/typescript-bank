@@ -26,5 +26,15 @@ export class Account {
     public set balance(balance: number) {
         this._balance = balance;
     }
+
+    make_withdrawal(account: Account, amount: number){
+        if(amount > account.balance) {
+            console.log("CANNOT WITHDRAW THAT MUCH.")
+        }
+        else {
+            const balance = account.balance - amount
+            console.log("Your new balance is: £" + balance)
+        }
+    }
 }
 
