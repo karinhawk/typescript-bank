@@ -32,9 +32,14 @@ export class Account {
             console.log("CANNOT WITHDRAW THAT MUCH.")
         }
         else {
-            const balance = account.balance - amount
-            console.log("Your new balance is: £" + balance)
+            account.balance = account.balance - amount
+            console.log("Your new balance is: £" + account.balance)
         }
+    }
+
+    make_deposit(account: Account, amount: number){
+            account.balance = account.balance + amount
+            console.log("Your new balance is: £" + account.balance)
     }
 }
 
